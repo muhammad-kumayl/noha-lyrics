@@ -1,0 +1,963 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Islamic Noha, Manqabat & Salam Lyrics - Artists & Poetry</title>
+    <meta name="description" content="Explore featured Islamic lyrics by renowned artists like Nadeem Sarwar, Mir Hasan Mir, and Shahid Baltistani. Browse Noha, Manqabat, and Salam collections.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-dark: #0f1419;
+            --primary-gold: #d4af37;
+            --primary-accent: #8b5a2b;
+            --card-bg: #1a1f28;
+            --text-primary: #f5f5f5;
+            --text-secondary: #b0b0b0;
+            --border-color: #2a3142;
+            --accent-teal: #2d5a5a;
+        }
+
+        /* Light Theme */
+        [data-theme="light"] {
+            --primary-dark: #ffffff;
+            --primary-gold: #c9860d;
+            --primary-accent: #8b5a2b;
+            --card-bg: #f8f6f1;
+            --text-primary: #1a1a1a;
+            --text-secondary: #666666;
+            --border-color: #e0ddd6;
+            --accent-teal: #4a7a7a;
+        }
+
+        [data-theme="light"] body {
+            background: linear-gradient(135deg, #ffffff 0%, #f5f3f0 100%);
+        }
+
+        [data-theme="light"] header {
+            background: rgba(255, 255, 255, 0.95);
+        }
+
+        [data-theme="light"] .search-box {
+            background: var(--card-bg);
+            border: 2px solid var(--border-color);
+        }
+
+        [data-theme="light"] .hero {
+            color: var(--text-primary);
+        }
+
+        [data-theme="light"] .artists-section {
+            background: rgba(74, 122, 122, 0.08);
+        }
+
+        [data-theme="light"] .cta-section {
+            background: linear-gradient(135deg, rgba(74, 122, 122, 0.1) 0%, rgba(201, 134, 13, 0.08) 100%);
+        }
+
+        [data-theme="light"] footer {
+            background: rgba(255, 255, 255, 0.95);
+        }
+
+        [data-theme="light"] ::-webkit-scrollbar-track {
+            background: #f0f0f0;
+        }
+
+        [data-theme="light"] ::-webkit-scrollbar-thumb {
+            background: var(--primary-gold);
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, var(--primary-dark) 0%, #1a1f28 100%);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Header */
+        header {
+            background: rgba(15, 20, 25, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border-color);
+            padding: 1.5rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            animation: slideDown 0.6s ease-out;
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            text-decoration: none;
+            color: var(--primary-gold);
+            font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--primary-gold) 0%, var(--primary-accent) 100%);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+        }
+
+        nav {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        nav a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        nav a:hover {
+            color: var(--primary-gold);
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary-gold);
+            transition: width 0.3s ease;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        .submit-btn {
+            background: linear-gradient(135deg, var(--primary-gold) 0%, var(--primary-accent) 100%);
+            color: var(--primary-dark);
+            padding: 0.7rem 1.5rem;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            font-size: 0.95rem;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(212, 175, 55, 0.3);
+        }
+
+        /* Theme Toggle Button */
+        .theme-toggle {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            color: var(--primary-gold);
+            width: 44px;
+            height: 44px;
+            border-radius: 8px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            font-size: 1.2rem;
+            padding: 0;
+        }
+
+        .theme-toggle:hover {
+            border-color: var(--primary-gold);
+            background: rgba(212, 175, 55, 0.1);
+            transform: scale(1.05);
+        }
+
+        .theme-toggle:active {
+            transform: scale(0.95);
+        }
+
+        .theme-icon {
+            transition: transform 0.3s ease;
+            display: inline-block;
+        }
+
+        .theme-toggle:hover .theme-icon {
+            transform: rotate(20deg);
+        }
+
+        /* Hero Section */
+        .hero {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+            text-align: center;
+            animation: fadeInUp 0.8s ease-out 0.2s both;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, var(--primary-gold) 0%, #ffd700 50%, var(--primary-accent) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 800;
+            letter-spacing: -1px;
+            line-height: 1.2;
+        }
+
+        .hero-subtitle {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+            font-weight: 300;
+        }
+
+        .hero-subtitle em {
+            color: var(--primary-gold);
+            font-style: normal;
+            font-weight: 500;
+        }
+
+        /* Search Bar */
+        .search-container {
+            margin-top: 2.5rem;
+            animation: fadeInUp 0.8s ease-out 0.3s both;
+        }
+
+        .search-box {
+            display: flex;
+            gap: 0.8rem;
+            max-width: 600px;
+            margin: 0 auto 1rem;
+            background: var(--card-bg);
+            border: 2px solid var(--border-color);
+            border-radius: 12px;
+            padding: 0.8rem;
+            transition: all 0.3s ease;
+        }
+
+        .search-box:focus-within {
+            border-color: var(--primary-gold);
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.2);
+        }
+
+        .search-input {
+            flex: 1;
+            background: transparent;
+            border: none;
+            color: var(--text-primary);
+            font-size: 1rem;
+            outline: none;
+            padding: 0 1rem;
+            font-family: inherit;
+        }
+
+        .search-input::placeholder {
+            color: var(--text-secondary);
+        }
+
+        .search-btn {
+            background: linear-gradient(135deg, var(--primary-gold) 0%, var(--primary-accent) 100%);
+            color: var(--primary-dark);
+            border: none;
+            border-radius: 8px;
+            padding: 0.7rem 1.8rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 0.95rem;
+            white-space: nowrap;
+        }
+
+        .search-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(212, 175, 55, 0.3);
+        }
+
+        .search-btn:active {
+            transform: translateY(0);
+        }
+
+        .search-hint {
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+            text-align: center;
+        }
+
+        /* Artists Section */
+        .artists-section {
+            margin: 3rem 0;
+            padding: 3rem 2rem;
+            background: rgba(45, 90, 90, 0.1);
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+        }
+
+        .artists-label {
+            color: var(--primary-gold);
+            font-size: 0.9rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+        }
+
+        .artists-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .artist-name {
+            padding: 1.5rem;
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .artist-name::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(212, 175, 55, 0.1) 0%, transparent 70%);
+            transition: all 0.5s ease;
+        }
+
+        .artist-name:hover {
+            border-color: var(--primary-gold);
+            background: rgba(212, 175, 55, 0.05);
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(212, 175, 55, 0.15);
+        }
+
+        .artist-name span {
+            position: relative;
+            z-index: 2;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--primary-gold);
+            display: block;
+        }
+
+        /* Featured Lyrics Section */
+        .featured-section {
+            margin: 4rem 0;
+            animation: fadeInUp 0.8s ease-out 0.4s both;
+        }
+
+        .section-label {
+            color: var(--primary-gold);
+            font-size: 0.9rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+        }
+
+        .featured-title {
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: var(--text-primary);
+            font-weight: 700;
+        }
+
+        .lyrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .lyric-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 2rem;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .lyric-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary-gold) 0%, var(--accent-teal) 100%);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s ease;
+        }
+
+        .lyric-card:hover {
+            border-color: var(--primary-gold);
+            background: rgba(212, 175, 55, 0.08);
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(212, 175, 55, 0.15);
+        }
+
+        .lyric-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .lyric-type {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--primary-gold) 0%, var(--primary-accent) 100%);
+            color: var(--primary-dark);
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            width: fit-content;
+            letter-spacing: 0.5px;
+        }
+
+        .lyric-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 0.8rem;
+            color: var(--primary-gold);
+            line-height: 1.4;
+        }
+
+        .lyric-artist {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .lyric-excerpt {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
+            line-height: 1.8;
+            font-style: italic;
+        }
+
+        .read-more-link {
+            color: var(--primary-gold);
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .read-more-link:hover {
+            gap: 1rem;
+        }
+
+        .read-more-link::after {
+            content: '→';
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, rgba(45, 90, 90, 0.2) 0%, rgba(212, 175, 55, 0.1) 100%);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 4rem 2rem;
+            text-align: center;
+            margin: 4rem 0;
+            animation: fadeInUp 0.8s ease-out 0.6s both;
+        }
+
+        .cta-title {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+            font-weight: 700;
+        }
+
+        .cta-description {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            margin-bottom: 2.5rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-button {
+            background: linear-gradient(135deg, var(--primary-gold) 0%, var(--primary-accent) 100%);
+            color: var(--primary-dark);
+            padding: 1rem 2.5rem;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            letter-spacing: 0.5px;
+            box-shadow: 0 8px 25px rgba(212, 175, 55, 0.2);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(212, 175, 55, 0.3);
+        }
+
+        .cta-button::before {
+            content: '🎵';
+        }
+
+        /* Footer */
+        footer {
+            background: rgba(15, 20, 25, 0.95);
+            border-top: 1px solid var(--border-color);
+            padding: 3rem 2rem;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-section h3 {
+            color: var(--primary-gold);
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .footer-section p {
+            color: var(--text-secondary);
+            line-height: 1.8;
+            font-size: 0.95rem;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .social-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 45px;
+            height: 45px;
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 50%;
+            color: var(--primary-gold);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-size: 1.2rem;
+        }
+
+        .social-link:hover {
+            background: linear-gradient(135deg, var(--primary-gold) 0%, var(--primary-accent) 100%);
+            color: var(--primary-dark);
+            border-color: var(--primary-gold);
+            transform: translateY(-4px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border-color);
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .footer-bottom p {
+            margin: 0.5rem 0;
+        }
+
+        .footer-link {
+            color: var(--primary-gold);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .footer-link:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            nav {
+                flex-direction: column;
+                gap: 1rem;
+                width: 100%;
+                text-align: center;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .featured-title {
+                font-size: 1.8rem;
+            }
+
+            .cta-section {
+                padding: 2rem 1.5rem;
+            }
+
+            .cta-title {
+                font-size: 1.5rem;
+            }
+
+            .artists-grid {
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            }
+        }
+
+        /* Scrollbar Styling */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--primary-dark);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--primary-gold);
+            border-radius: 5px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--primary-accent);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-content">
+            <a href="#" class="logo">
+                <div class="logo-icon">🕌</div>
+                <span>Noha Lyrics</span>
+            </a>
+            <nav>
+                <a href="#featured">Featured</a>
+                <a href="#artists">Artists</a>
+                <a href="#cta">Browse</a>
+                <button class="theme-toggle" id="themeToggle" onclick="toggleTheme()" title="Toggle Dark/Light Theme">
+                    <span class="theme-icon">🌙</span>
+                </button>
+                <button class="submit-btn" onclick="window.open('https://nohalyrics.net/', '_blank')">Visit Main Site</button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <h1>Noha Lyrics</h1>
+            <p class="hero-subtitle">Explore <em>Noha, Manqabat & Salam</em> by the most renowned artists</p>
+            
+            <!-- Search Bar -->
+            <div class="search-container">
+                <div class="search-box">
+                    <input 
+                        type="text" 
+                        id="searchInput" 
+                        class="search-input" 
+                        placeholder="Search Noha, Manqabat, Salam lyrics..."
+                        autocomplete="off"
+                    >
+                    <button class="search-btn" onclick="performSearch()">
+                        <span>🔍 Search</span>
+                    </button>
+                </div>
+                <p class="search-hint">Press Enter to search or click the Search button</p>
+            </div>
+        </section>
+
+        <!-- Artists Section -->
+        <section class="artists-section" id="artists">
+            <div class="max-width">
+                <div style="max-width: 1200px; margin: 0 auto; padding: 0 2rem;">
+                    <p class="artists-label">✦ Featured Artists</p>
+                    <div class="artists-grid">
+                        <div class="artist-name" onclick="scrollToSection('featured')">
+                            <span>Nadeem Sarwar</span>
+                        </div>
+                        <div class="artist-name" onclick="scrollToSection('featured')">
+                            <span>Mir Hasan Mir</span>
+                        </div>
+                        <div class="artist-name" onclick="scrollToSection('featured')">
+                            <span>Shahid Baltistani</span>
+                        </div>
+                        <div class="artist-name" onclick="scrollToSection('featured')">
+                            <span>Shadman Raza</span>
+                        </div>
+                        <div class="artist-name" onclick="scrollToSection('featured')">
+                            <span>Ahmad Raza Nasiri</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Lyrics Section -->
+        <section class="featured-section" id="featured" style="max-width: 1200px; margin: 0 auto; padding: 0 2rem;">
+            <p class="section-label">⭐ Featured Collections</p>
+            <h2 class="featured-title">Latest & Popular Lyrics</h2>
+            
+            <div class="lyrics-grid">
+                <!-- Card 1 -->
+                <div class="lyric-card">
+                    <span class="lyric-type">NOHA</span>
+                    <h3 class="lyric-title">Aakhri Sajda</h3>
+                    <p class="lyric-artist">by Nadeem Sarwar</p>
+                    <p class="lyric-excerpt">"A powerful noha reflecting on devotion and remembrance. This classic composition combines traditional themes with modern sensibilities, creating a bridge between generations of Islamic poetry lovers..."</p>
+                    <a href="https://nohalyrics.net/" class="read-more-link" target="_blank">Read Full Lyrics</a>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="lyric-card">
+                    <span class="lyric-type">MANQABAT</span>
+                    <h3 class="lyric-title">Dar E Zindaan</h3>
+                    <p class="lyric-artist">by Mir Hasan Mir</p>
+                    <p class="lyric-excerpt">"An emotionally charged manqabat celebrating the virtues of the Ahl-e-Bayt. With lyrical depth and spiritual resonance, this piece has touched millions of hearts across the Islamic world..."</p>
+                    <a href="https://nohalyrics.net/" class="read-more-link" target="_blank">Read Full Lyrics</a>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="lyric-card">
+                    <span class="lyric-type">SALAM</span>
+                    <h3 class="lyric-title">Assalamu Alayka</h3>
+                    <p class="lyric-artist">by Shahid Baltistani</p>
+                    <p class="lyric-excerpt">"A beautiful salam expressing greetings and salutations. This piece showcases the artistic brilliance of contemporary Islamic poetry, blending traditional verses with modern musical arrangements..."</p>
+                    <a href="https://nohalyrics.net/" class="read-more-link" target="_blank">Read Full Lyrics</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section" id="cta" style="max-width: 1200px; margin: 0 auto; width: calc(100% - 4rem);">
+            <h2 class="cta-title">Discover the Complete Collection</h2>
+            <p class="cta-description">Access thousands of lyrics from your favorite artists. Browse by artist, type, year, and more at our comprehensive lyrics database.</p>
+            <button class="cta-button" onclick="window.open('https://nohalyrics.net/', '_blank')">Explore Full Library</button>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <!-- About Section -->
+            <div class="footer-section">
+                <h3>Islamic Lyrics</h3>
+                <p>Your gateway to the finest Islamic poetry and devotional music. Explore Noha, Manqabat, and Salam lyrics by renowned artists from around the world.</p>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <p>
+                    <a href="#featured" class="footer-link">Featured Lyrics</a><br>
+                    <a href="#artists" class="footer-link">Our Artists</a><br>
+                    <a href="https://nohalyrics.net/" class="footer-link" target="_blank">Main Website</a>
+                </p>
+            </div>
+
+            <!-- Connect -->
+            <div class="footer-section">
+                <h3>Connect With Us</h3>
+                <p>Follow us on social media for daily updates, new releases, and featured content.</p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/fatimazahrasa110" class="social-link" target="_blank" title="Facebook">f</a>
+                    <a href="https://www.youtube.com/@YaZehrasa" class="social-link" target="_blank" title="YouTube">▶</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+            <p>&copy; 2024 Islamic Lyrics. All rights reserved. | <a href="https://nohalyrics.net/" class="footer-link" target="_blank">Visit Main Site</a></p>
+            <p>Dedicated to the preservation and sharing of Islamic poetry and devotional arts</p>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize theme on page load
+        function initializeTheme() {
+            const savedTheme = localStorage.getItem('theme') || 'dark';
+            document.documentElement.setAttribute('data-theme', savedTheme);
+            updateThemeIcon(savedTheme);
+        }
+
+        // Toggle theme function
+        function toggleTheme() {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            
+            document.documentElement.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            updateThemeIcon(newTheme);
+        }
+
+        // Update theme icon
+        function updateThemeIcon(theme) {
+            const themeIcon = document.querySelector('.theme-icon');
+            if (themeIcon) {
+                themeIcon.textContent = theme === 'dark' ? '☀️' : '🌙';
+            }
+        }
+
+        // Smooth scroll to section
+        function scrollToSection(sectionId) {
+            const element = document.getElementById(sectionId);
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        }
+
+        // Search functionality
+        function performSearch() {
+            const searchInput = document.getElementById('searchInput');
+            const query = searchInput.value.trim();
+            
+            if (query.length > 0) {
+                // Redirect to main website with search query
+                const searchUrl = `https://nohalyrics.net/?search=${encodeURIComponent(query)}`;
+                window.open(searchUrl, '_blank');
+                // Clear search input
+                searchInput.value = '';
+            } else {
+                alert('Please enter a search term');
+            }
+        }
+
+        // Allow Enter key to trigger search
+        document.getElementById('searchInput').addEventListener('keypress', function(event) {
+            if (event.key === 'Enter') {
+                performSearch();
+            }
+        });
+
+        // Add animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        // Observe all lyric cards and sections
+        document.querySelectorAll('.lyric-card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(card);
+        });
+
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href !== '#') {
+                    e.preventDefault();
+                    scrollToSection(href.substring(1));
+                }
+            });
+        });
+
+        // Add hover effect to artist names
+        document.querySelectorAll('.artist-name').forEach(artist => {
+            artist.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-8px)';
+            });
+            artist.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+            });
+        });
+
+        // Initialize theme when page loads
+        window.addEventListener('DOMContentLoaded', initializeTheme);
+        
+        console.log('Islamic Lyrics website loaded successfully with theme support');
+    </script>
+</body>
+</html>
